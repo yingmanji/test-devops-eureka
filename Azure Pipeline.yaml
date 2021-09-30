@@ -5,6 +5,7 @@
 trigger:
 - master
 - feature/dev2
+- dev2
 
 resources:
 - repo: self
@@ -45,7 +46,7 @@ stages:
         effectivePomSkip: false
         sonarQubeRunAnalysis: false
         goals: "1234"
-        condition: and(succeeded(), eq(variables['Build.SourceBranchName'], 'master'))
+        condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
     - task: Maven@3
       inputs:
         mavenPomFile: 'pom2.xml'
@@ -57,7 +58,7 @@ stages:
         effectivePomSkip: false
         sonarQubeRunAnalysis: false
         goals: '123'
-        condition: and(succeeded(), eq(variables['Build.SourceBranchName'], 'dev'))
+        condition: and(succeeded(), eq(variables['Build.SourceBranchName'], 'refs/heads/dev2'))
     - task: CopyFiles@2
       displayName: 'Copy Files to artifact staging directory'
       inputs:
