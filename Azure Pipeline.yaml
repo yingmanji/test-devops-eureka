@@ -44,6 +44,18 @@ stages:
         mavenAuthenticateFeed: false
         effectivePomSkip: false
         sonarQubeRunAnalysis: false
+        condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+    - task: Maven@3
+      inputs:
+        mavenPomFile: 'pom2.xml'
+        publishJUnitResults: true
+        testResultsFiles: '**/surefire-reports/TEST-*.xml'
+        javaHomeOption: 'JDKVersion'
+        mavenVersionOption: 'Default'
+        mavenAuthenticateFeed: false
+        effectivePomSkip: false
+        sonarQubeRunAnalysis: false
+        condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/feature/dev'))
     - task: CopyFiles@2
       displayName: 'Copy Files to artifact staging directory'
       inputs:
