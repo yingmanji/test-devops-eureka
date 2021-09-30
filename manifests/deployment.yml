@@ -16,4 +16,4 @@ spec:
         - name: yingmanjitestdevopseureka
           image: yingmanjicr.azurecr.io/yingmanjitestdevopseureka
           ports:
-          - containerPort: 7070
+          - containerPort: 80
