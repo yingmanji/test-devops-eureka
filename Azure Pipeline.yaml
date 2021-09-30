@@ -44,7 +44,7 @@ stages:
         mavenAuthenticateFeed: false
         effectivePomSkip: false
         sonarQubeRunAnalysis: false
-        condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+        condition: and(succeeded(), eq(variables['Build.SourceBranchName'], 'master'))
     - task: Maven@3
       inputs:
         mavenPomFile: 'pom2.xml'
@@ -55,7 +55,7 @@ stages:
         mavenAuthenticateFeed: false
         effectivePomSkip: false
         sonarQubeRunAnalysis: false
-        condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/feature/dev'))
+        condition: and(succeeded(), eq(variables['Build.SourceBranchName'], 'dev'))
     - task: CopyFiles@2
       displayName: 'Copy Files to artifact staging directory'
       inputs:
