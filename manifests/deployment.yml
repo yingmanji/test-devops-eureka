@@ -1,7 +1,7 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: springframeworkpetclinicv1 
+  name: yingmanjitestdevopseureka 
 spec:
   replicas: 1
   selector:
