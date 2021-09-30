@@ -6,14 +6,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: springframeworkpetclinicv1
+      app: yingmanjitestdevopseureka
   template:
     metadata:
       labels:
-        app: springframeworkpetclinicv1 
+        app: yingmanjitestdevopseureka
     spec:
       containers:
-        - name: springframeworkpetclinicv1 
-          image: yingmanjidr.azurecr.io/springframeworkpetclinicv1
+        - name: yingmanjitestdevopseureka
+          image: yingmanjicr.azurecr.io/yingmanjitestdevopseureka
           ports:
           - containerPort: 8080
