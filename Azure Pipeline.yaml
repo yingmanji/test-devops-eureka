@@ -2,12 +2,16 @@
 # Build and push image to Azure Container Registry; Deploy to Azure Kubernetes Service
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
+# trigger:
+# branches:
+#     include:
+#     - master
+#     - feature/dev2
+#     - dev2
 trigger:
-branches:
+  branches:
     include:
-    - master
-    - feature/dev2
-    - dev2
+    - '*'
 
 resources:
 - repo: self
