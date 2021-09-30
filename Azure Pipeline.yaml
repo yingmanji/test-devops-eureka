@@ -17,7 +17,7 @@ variables:
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
   imagePullSecret: 'yingmanjidr1144f31e-auth'
-  testvar: 'testvar2'
+  testvar: 'testvar3'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
