@@ -11,7 +11,7 @@ variables:
 - name: imageRepository
   value: 'springframeworkpetclinicv1'
 - name: containerRegistry
-  value: 'yingmanjidr.azurecr.io'
+  value: 'yingmanjicr.azurecr.io'
 - name: dockerfilePath
   value: '**/Dockerfile'
 - name: tag
