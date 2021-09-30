@@ -3,7 +3,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 trigger:
-- master
+- feature/dev
 
 resources:
 - repo: self
@@ -17,6 +17,7 @@ variables:
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
   imagePullSecret: 'yingmanjidr1144f31e-auth'
+  testvar: 'testvar'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
