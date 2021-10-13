@@ -44,7 +44,7 @@ stages:
     - task: Docker@2
       displayName: Build and push an image to container registry
       inputs:
-        containerRegistry: '20211011CR'
+        containerRegistry: '20211013CR'
         repository: '$(imageRepository)'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
